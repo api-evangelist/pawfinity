@@ -1,0 +1,80 @@
+aid: pawfinity
+name: Pawfinity
+review:
+  question: Does Pawfinity expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Pawfinity publishes no documented API
+    surface of any kind - REST, GraphQL, or WebSocket - so there is no
+    server-push transport on Pawfinity's own product to model. Pawfinity is a
+    closed pet-service-business SaaS application, not an API platform.
+findings:
+  summary: |
+    Pawfinity does not publish a documented public or partner WebSocket API,
+    and it does not publish any documented public or partner API at all.
+    Pawfinity is pet service business management software (grooming, mobile
+    grooming, kennels, dog daycare, pet sitting, training, pet therapy) sold
+    as a closed, single-tenant web application. The marketing site
+    (pawfinity.com), FAQ, pricing page, and about page make no mention of an
+    API, developer portal, SDK, or webhooks. The Pawfinity knowledgebase
+    (kb.pawfinity.com) is a placeholder as of this review ("coming soon") with
+    no technical documentation published. Probing likely developer subdomains
+    (developer.pawfinity.com, api.pawfinity.com) returned the marketing
+    homepage rather than any distinct developer surface, confirming none
+    exists. The only outbound data integration found is Quickbooks Connect, a
+    first-party feature that performs a one-way nightly export of a
+    customer's own Pawfinity transaction data into their QuickBooks Online
+    account - a built-in sync, not a documented, callable API available to
+    third-party developers. No realtime, bidirectional, or streaming
+    WebSocket (ws:// or wss://) endpoint is documented anywhere for Pawfinity.
+  openSource: |
+    Pawfinity is closed-source, proprietary, privately owned and self-funded
+    software. No source code, SDKs, or client libraries are published.
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: No public or partner REST API is documented anywhere on pawfinity.com or kb.pawfinity.com.
+  - protocol: Webhook
+    scheme: https
+    documented: false
+    note: No webhook system for third-party developers is documented.
+  - protocol: WebSocket
+    scheme: wss
+    documented: false
+    note: No WebSocket endpoint is documented anywhere for Pawfinity.
+  - protocol: Built-in Integration
+    scheme: https
+    documented: true
+    note: Quickbooks Connect - a first-party, one-way nightly export of Pawfinity transaction data into a customer's own QuickBooks Online account. Configured in-app, not a documented callable API.
+  endpointsConfirmedRest: []
+sources:
+- url: https://www.pawfinity.com/
+  type: Website
+  note: Marketing homepage; no API, developer, or SDK links present in navigation or footer.
+- url: https://www.pawfinity.com/faq/
+  type: Documentation
+  note: FAQ page; no mention of API, developer access, or webhooks.
+- url: https://www.pawfinity.com/about/
+  type: Documentation
+  note: Company/about page; no mention of an API or developer platform.
+- url: https://www.pawfinity.com/pricing/
+  type: Documentation
+  note: Pricing page; per-facility subscription tiers plus metered SMS/storage add-ons, no API/usage-based developer pricing.
+- url: https://www.pawfinity.com/features/quickbooks-integration/
+  type: Documentation
+  note: Describes Quickbooks Connect as a built-in, one-way nightly sync feature, not a public API.
+- url: https://kb.pawfinity.com/
+  type: Documentation
+  note: Pawfinity knowledgebase; placeholder "coming soon" page as of the review date, no technical documentation published.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No API transport surface of any kind (REST, GraphQL, WebSocket) is
+    documented for Pawfinity, so no AsyncAPI document was created and the
+    apis.yml apis array is left empty rather than populated with fabricated
+    endpoints.

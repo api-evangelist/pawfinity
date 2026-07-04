@@ -1,0 +1,200 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Pawfinity
+providerId: pawfinity
+created: '2026-07-04'
+modified: '2026-07-04'
+reconciled: false
+tags:
+- Pet Care
+- Grooming Software
+- Boarding Software
+- Daycare Software
+- Plans
+description: >-
+  Pawfinity sells three per-facility software subscription tiers, each with
+  unlimited employee logins, clients, pets, appointments, and photos - there
+  is no usage-based or per-seat pricing and no API/developer pricing, since
+  Pawfinity does not expose a public API. Metered add-ons exist for SMS
+  messaging, secure document storage, and precision location services.
+notes: >-
+  Pricing reflects the public pricing page at review time. Verify current
+  rates on the Pawfinity pricing page during reconciliation; annual billing
+  is discounted relative to monthly billing on all three core plans.
+sources:
+- https://www.pawfinity.com/pricing/
+- https://www.pawfinity.com/faq/
+plans:
+- id: pawfinity-groom-and-train
+  name: Groom & Train
+  type: paid
+  description: >-
+    Entry-tier subscription built for grooming, training, nail, and dental
+    services at a single facility.
+  entries:
+  - label: Monthly Billing
+    name: groom_and_train_monthly
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $60/month
+    userMultiplied: false
+  - label: Annual Billing
+    name: groom_and_train_annual
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $55/month (billed annually)
+    userMultiplied: false
+  elements:
+  - name: Unlimited Employee Logins
+  - name: Unlimited Clients and Pets
+  - name: Unlimited Appointments and Photos
+  - name: Online Booking
+- id: pawfinity-stay-and-play
+  name: Stay & Play
+  type: paid
+  description: >-
+    Entry-tier subscription built for boarding, daycare, and pet sitting
+    services at a single facility.
+  entries:
+  - label: Monthly Billing
+    name: stay_and_play_monthly
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $60/month
+    userMultiplied: false
+  - label: Annual Billing
+    name: stay_and_play_annual
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $55/month (billed annually)
+    userMultiplied: false
+  elements:
+  - name: Unlimited Employee Logins
+  - name: Unlimited Clients and Pets
+  - name: Unlimited Appointments and Photos
+  - name: Online Booking
+- id: pawfinity-royal-package
+  name: Royal Package
+  type: paid
+  description: >-
+    Top-tier subscription covering grooming, boarding, daycare, training, and
+    pet therapy in a single facility, bundled with 250 complimentary SMS
+    credits per month.
+  entries:
+  - label: Monthly Billing
+    name: royal_package_monthly
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $110/month
+    userMultiplied: false
+  - label: Annual Billing
+    name: royal_package_annual
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $100/month (billed annually)
+    userMultiplied: false
+  elements:
+  - name: Unlimited Employee Logins
+  - name: Unlimited Clients and Pets
+  - name: Unlimited Appointments and Photos
+  - name: Online Booking
+  - name: 250 Complimentary SMS Credits/Month
+- id: pawfinity-addons
+  name: Metered Add-Ons
+  type: usage
+  description: >-
+    Optional metered add-ons layered on top of any core subscription tier:
+    SMS messaging beyond included credits, secure document storage, and
+    precision location services.
+  entries:
+  - label: SMS - Basic
+    name: sms_basic
+    type: usage
+    metric: messages
+    limit: 500
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $0.05/SMS (under 500/month)
+    userMultiplied: false
+  - label: SMS - Plus
+    name: sms_plus
+    type: usage
+    metric: messages
+    limit: 1000
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $0.045/SMS (501-1,000/month)
+    userMultiplied: false
+  - label: SMS - Premium
+    name: sms_premium
+    type: usage
+    metric: messages
+    limit: 1500
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $0.04/SMS (1,001-1,500/month)
+    userMultiplied: false
+  - label: SMS - Ultimate
+    name: sms_ultimate
+    type: usage
+    metric: messages
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $0.035/SMS (1,501+/month)
+    userMultiplied: false
+  - label: Secure Document Storage
+    name: document_storage
+    type: usage
+    metric: gigabytes
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $5/month base (under 5GB), +$0.80/GB (5-10GB), +$0.60/GB (over 10GB)
+    userMultiplied: false
+  - label: Precision Location Services
+    name: precision_location
+    type: flat
+    metric: facility
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $5/month flat
+    userMultiplied: false
+  elements:
+  - name: Inbound SMS Replies Free
+  - name: DTC Marketing (Free, Beta)
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

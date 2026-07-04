@@ -1,0 +1,32 @@
+aid: pawfinity
+url: https://raw.githubusercontent.com/api-evangelist/pawfinity/refs/heads/main/apis.yml
+name: Pawfinity
+kind: company
+description: Pawfinity is pet service business management software for grooming
+  salons, mobile groomers, kennels, dog daycares, pet sitting, training, and pet
+  therapy businesses - handling online booking, client and pet records, scheduling,
+  point of sale, and staff management. Pawfinity does not publish a public or
+  partner developer API or developer portal. The product is a closed, single-tenant
+  SaaS web application; the only outbound data integration is a built-in, one-way
+  nightly QuickBooks Online sync bundled with the subscription, not a documented
+  API a third party can call.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Pet Care
+- Grooming Software
+- Boarding Software
+- Daycare Software
+- Business Management
+- No Public API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.pawfinity.com/
+- type: Plans
+  url: plans/pawfinity-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
