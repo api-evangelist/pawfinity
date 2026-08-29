@@ -10,6 +10,17 @@ description: Pawfinity is pet service business management software for grooming
   SaaS web application; the only outbound data integration is a built-in, one-way
   nightly QuickBooks Online sync bundled with the subscription, not a documented
   API a third party can call.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
