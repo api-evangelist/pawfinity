@@ -203,3 +203,48 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - subscription
+  units:
+  - data
+  - message
+  - object
+  plans:
+  - name: Groom & Train
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Stay & Play
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Royal Package
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Metered Add-Ons
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - data
+    - message
+    - object
+    periods:
+    - month
