@@ -1,4 +1,4 @@
-# Pawfinity (pawfinity)
+# Pawfinity
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,32 +66,84 @@
 
 Pawfinity is pet service business management software for grooming salons, mobile groomers, kennels, dog daycares, pet sitting, training, and pet therapy businesses - handling online booking, client and pet records, scheduling, point of sale, and staff management. Pawfinity does not publish a public or partner developer API or developer portal. The product is a closed, single-tenant SaaS web application; the only outbound data integration is a built-in, one-way nightly QuickBooks Online sync bundled with the subscription, not a documented API a third party can call.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/pawfinity/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/pawfinity/refs/heads/main/apis.yml)
+**Areas:** Pet Care · Grooming Software · Boarding Software · Daycare Software · Business Management
 
-## Tags
+## Pawfinity on APIs.io
 
-- Pet Care
-- Grooming Software
-- Boarding Software
-- Daycare Software
-- Business Management
-- No Public API
+Everything profiled for Pawfinity is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pawfinity/](https://apis.io/providers/pawfinity/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-Pawfinity does not expose a documented public or partner API. No developer portal, API reference, SDK, or webhook system was found on pawfinity.com or the (not-yet-launched) Pawfinity knowledgebase at kb.pawfinity.com. The product's only external system integration is Quickbooks Connect, a first-party, one-way nightly export of transaction data into a customer's own QuickBooks Online account - a built-in feature, not a callable API. No `apis` entries are listed here because there is nothing real to model, and none have been fabricated.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Pawfinity Domain Security](https://apis.io/security/pawfinity/pawfinity-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Pawfinity Plans Pricing](https://apis.io/plans/pawfinity/pawfinity-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.pawfinity.com/)
-- [Plans](plans/pawfinity-plans-pricing.yml)
+- [Blog](https://www.pawfinity.com/articles/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 5.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pawfinity/](https://apis.io/providers/pawfinity/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pawfinity: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pawfinity/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
